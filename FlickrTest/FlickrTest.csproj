@@ -220,6 +220,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Properties\PublishProfiles\flickr-test.pubxml" />
