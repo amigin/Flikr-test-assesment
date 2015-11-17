@@ -1,0 +1,19 @@
+﻿@using FlickrTest.App_Start
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render(BundleConfig.Css)
+    @Scripts.Render(BundleConfig.Jquery)
+    @Scripts.Render(BundleConfig.Scripts)
+    <script>
+        imageRequester.init({ requestUrl: '@Url.Action("Index","Imgs")' })
+    </script>
+</head>
+<body>
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+</body>
+</html>

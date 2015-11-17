@@ -1,0 +1,19 @@
+﻿@using FlickrTest.Strings
+@{
+    ViewBag.Title = "Index";
+}
+<div class="main-content">
+            <form id="searchForm"  class="header">
+                @Html.TextBox("tags", null, new { placeholder = Translations.SearchImages, @class = "search-box" })
+                <img id="loadingIndicator" src="~/Images/Loading.gif" alt="Loading" style="display: none;"/>
+                <input style="display: none;"/>
+                <a class="btn btn-share" id="link" href="">@Translations.Share...</a>
+            </form>
+
+    <div class="container">
+
+    </div>
+
+    <div id="popupMessage">MyMessage</div>
+
+</div>
