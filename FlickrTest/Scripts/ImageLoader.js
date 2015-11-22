@@ -12,3 +12,4 @@ var ImageLoader = (function () {
     };
     return ImageLoader;
 })();
+//# sourceMappingURL=ImageLoader.js.map

@@ -71,3 +71,4 @@ var Ui = (function () {
 var ui = new Ui();
 $(window).resize(function () { ui.ressize(); });
 $(window).ready(function () { return ui.ressize(); });
+//# sourceMappingURL=Ui.js.map

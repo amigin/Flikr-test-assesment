@@ -29,16 +29,19 @@ class ImageRequester {
 
         this.isRequesting = true;
 
- 
+        var linkJ = $('#link');
 
         setTimeout(() => {
 
             this.requestedVal = $("#tags").val();
             if (this.requestedVal == undefined || this.requestedVal.length < 3) {
                 this.stopRequesting();
+                linkJ.css('display', 'none');
                 return;
             }
 
+            linkJ.attr("href", $('#link').attr("data-href") +"/"+this.requestedVal);
+            linkJ.css('display', 'inline');
 
             var imgData = imagesCache.get(this.requestedVal);
 

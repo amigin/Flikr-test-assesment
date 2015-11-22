@@ -17,12 +17,16 @@ var ImageRequester = (function () {
         if (this.isRequesting)
             return;
         this.isRequesting = true;
+        var linkJ = $('#link');
         setTimeout(function () {
             _this.requestedVal = $("#tags").val();
             if (_this.requestedVal == undefined || _this.requestedVal.length < 3) {
                 _this.stopRequesting();
+                linkJ.css('display', 'none');
                 return;
             }
+            linkJ.attr("href", $('#link').attr("data-href") + "/" + _this.requestedVal);
+            linkJ.css('display', 'inline');
             var imgData = imagesCache.get(_this.requestedVal);
             if (imgData) {
                 _this.stopRequesting();
@@ -55,3 +59,4 @@ var imageRequester = new ImageRequester();
 $(window).ready(function () {
     $("#tags").keyup(function () { return imageRequester.tagKeyUp(); });
 });
+//# sourceMappingURL=Scripts.js.map

@@ -1,4 +1,6 @@
-﻿namespace FlickrTest.Models
+﻿using System.Collections.Generic;
+
+namespace FlickrTest.Models
 {
     /// <summary>
     /// The Flickr image model
@@ -13,5 +15,12 @@
         /// The image url
         /// </summary>
         public string ImageUrl { get; set; }
+    }
+
+
+    public class GetImagesViewModel
+    {
+        public IEnumerable<FlickrImage> Images { get; set; }
+        public string Tags { get; set; }
     }
 }

@@ -7,7 +7,7 @@
                 @Html.TextBox("tags", null, new { placeholder = Translations.SearchImages, @class = "search-box" })
                 <img id="loadingIndicator" src="~/Images/Loading.gif" alt="Loading" style="display: none;"/>
                 <input style="display: none;"/>
-                <a class="btn btn-share" id="link" href="">@Translations.Share...</a>
+                <a id="link" style="display: none" class="btn btn-share" data-href="@Url.Action("GetImages", "Imgs")" target="_blank">@Translations.Share...</a>
             </form>
 
     <div class="container">

@@ -12,3 +12,4 @@ var DataCache = (function () {
     return DataCache;
 })();
 var imagesCache = new DataCache();
+//# sourceMappingURL=DataCache.js.map
